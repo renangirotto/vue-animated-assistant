@@ -1,0 +1,228 @@
+//This animation is a default animation, if it hasn't any other state this will be running
+.-live {
+  //Control face group (eyes and muzzle)
+  .face {
+    animation-name: live-face;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+
+    //Control eyes group (left and right eyes)
+    .eyes {
+      //Control left eye open
+      .left-eye-open {
+        animation-name: live-blink;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+
+      //Control right eye open
+      .right-eye-open {
+        animation-name: live-blink;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    //Controll muzzle group (group, shadow and stroke)
+    .muzzle {
+      //Controll muzzçe shadow
+      .muzzle-shadow {
+        animation-name: live-muzzle-shadow;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  //Control ears group (left and right ears)
+  .ears {
+    animation-name: live-ears;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+
+    //Control left ear
+    .left-ear {
+      //Control left ear shadow
+      .left-ear-shadow {
+        animation-name: live-left-ear-shadows;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    //Control right ear
+    .right-ear {
+      //Control right ear shadow
+      .right-ear-shadow {
+        animation-name: live-right-ear-shadows;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
+
+/*
+  Animation reference
+  Durantion: 30s
+  Frame at: 0,3ms
+  1/11 frame at: 2,7s
+  Rest time: 0% - 10%, 40% - 60%, 90% - 100%
+  Action time: 10% - 40%, 60% - 90%
+*/
+
+@keyframes live-face {
+  10% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-15px, -15px);
+  }
+  30% {
+    transform: translate(15px, 10px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  70% {
+    transform: translate(15px, -15px);
+  }
+  80% {
+    transform: translate(-15px, 10px);
+  }
+  90% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes live-muzzle-shadow {
+  10% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-5px, -10px);
+  }
+  30% {
+    transform: translate(2.5px, 2.5px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  70% {
+    transform: translate(-5px, -10px);
+  }
+  80% {
+    transform: translate(-5px, 2.5px);
+  }
+  90% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes live-blink {
+  4.8% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  5.2% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  24.8% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  25.2% {
+    opacity: 1;
+  }
+  54.8% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  55.2% {
+    opacity: 1;
+  }
+  74.8% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.2% {
+    opacity: 1;
+  }
+  94.8% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  95.2% {
+    opacity: 1;
+  }
+}
+
+@keyframes live-ears {
+  10% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(15px, 15px);
+  }
+  30% {
+    transform: translate(-15px, -5px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  70% {
+    transform: translate(-15px, 15px);
+  }
+  80% {
+    transform: translate(15px, -5px);
+  }
+  90% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes live-left-ear-shadows {
+  20% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(15px, 5px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes live-right-ear-shadows {
+  70% {
+    transform: translate(0px, 0px);
+  }
+  80% {
+    transform: translate(-15px, 5px);
+  }
+  90% {
+    transform: translate(0px, 0px);
+  }
+}
